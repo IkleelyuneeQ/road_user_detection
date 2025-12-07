@@ -3,6 +3,7 @@
 # Ignore model weights
 *.pth
 *.pt
+*.csv
 
 # Ignore data folders
 archive
