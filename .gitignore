@@ -1,0 +1,12 @@
+# .gitignore
+
+# Ignore model weights
+*.pth
+*.pt
+
+# Ignore data folders
+archive
+
+# Ignore logs and temp files
+*.log
+__pycache__/

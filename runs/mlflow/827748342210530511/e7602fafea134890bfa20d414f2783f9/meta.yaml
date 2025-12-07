@@ -1,0 +1,14 @@
+artifact_uri: /Users/mac/road_sign_detection/runs/mlflow/827748342210530511/e7602fafea134890bfa20d414f2783f9/artifacts
+end_time: 1763709782633
+entry_point_name: ''
+experiment_id: '827748342210530511'
+lifecycle_stage: active
+run_id: e7602fafea134890bfa20d414f2783f9
+run_name: train6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763656850310
+status: 3
+tags: []
+user_id: mac

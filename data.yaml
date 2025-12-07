@@ -1,0 +1,11 @@
+names:
+- passenger_car
+- lorry
+- utility_vehicle
+- bus
+- tram
+- pedestrian
+nc: 6
+path: /Users/mac/road_users_detection/data_yolo
+train: images/train
+val: images/val
