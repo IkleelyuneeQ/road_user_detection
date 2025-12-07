@@ -6,6 +6,7 @@
 
 # Ignore data folders
 archive
+data_yolo
 
 # Ignore logs and temp files
 *.log
