@@ -6,20 +6,29 @@ The dataset contains street images with annotated objects such as vehicles and p
 ## Dependencies
 
 torch
+
 torchvision
+
 Pillow
+
 xml.etree
+
 pandas
+
 ultralytics
+
 yaml
+
 tqdm
 
 
 ## Data Structure
 
 archive/
-├── images/          # All raw images (.jpg/.png)
-└── annotations/     # Annotation files in Pascal VOC (.xml)
+
+├── images/   
+
+└── annotations/     
 
 ## Road user categories
 
@@ -28,13 +37,19 @@ classes = ["passenger_car", "lorry", "utility_vehicle", "bus", "tram", "pedestri
 ## Annotation Parsing
 
 The script extracts:
+
 Object name
+
 Bounding box coordinates (xmin, ymin, xmax, ymax)
+
 Image size
 
 ### Then converts bounding boxes into YOLO format:
+
 x_center, y_center, width, height  (normalized between 0–1)
+
 example: 
+
 [4 0.8293 0.4500 0.3398 0.4972] = [class_id x_center y_center width height]
 
 ## Data Conversion and Split
@@ -50,23 +65,36 @@ Convert images into .jpg format
 Randomly split dataset into train (80%) and val (20%)
 
 ### Save processed data into:
+
 data_yolo/
+
 ├── images/
+
 │   ├── train
+
 │   └── val
+
 └── labels/
+
     ├── train
+    
     └── val
 
 
 path: <absolute_path_to_data_yolo>
+
 train: images/train
+
 val: images/val
+
 names: [passenger_car, lorry, utility_vehicle, bus, tram, pedestrian]
+
 nc: 6
 
 ## Model tranning
+
 model = YOLO("yolo11s.pt")
+
 model.train(data="data.yaml", epochs=..., imgsz=...)
 
 ## Model Evaluation / Prediction
